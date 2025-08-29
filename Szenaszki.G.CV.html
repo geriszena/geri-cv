@@ -1,0 +1,1023 @@
+<!doctype html>
+<html lang="hu">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Szénászki Gergő — Kreatív, modern animált önéletrajz weboldal.">
+<meta property="og:title" content="Szénászki Gergő — Önéletrajz">
+<meta property="og:description" content="Kreatív, modern, animált önéletrajz.">
+<meta property="og:image" content="https://.../profilkep.jpg">
+
+  <title>Szénaszki Gergő — Önéletrajz</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600;800&display=swap" rel="stylesheet">
+
+  <style>
+    :root{
+      --bg:#0f111a;
+      --primary:#4ade80;
+      --secondary:#60a5fa;
+      --muted:#94a3b8;
+      --radius:20px;
+      --max-w:1100px;
+      font-family:'Poppins',sans-serif;
+    }
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{background:linear-gradient(135deg,#0f111a 0%,#1e293b 100%);color:#f1f5f9;overflow-x:hidden}
+
+    header {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      height: 70px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 30px;
+      z-index: 1000;
+      background: rgba(15,17,26,0.85);
+    }
+
+    header h1{
+      font-size:20px;font-weight:700;
+      background:linear-gradient(90deg,var(--primary),var(--secondary),#fff,var(--primary));
+      background-size:300% 300%;
+      -webkit-background-clip:text;
+      color:transparent;
+      animation:holo 6s infinite linear;
+    }
+    
+    @keyframes holo {
+      0%{background-position:0% 50%}
+      50%{background-position:100% 50%}
+      100%{background-position:0% 50%}
+    }
+
+
+
+section h2 {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 36px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  background: linear-gradient(90deg, #4ade80, #60a5fa, #a855f7, #f43f5e);
+  -webkit-background-clip: text;
+  color: transparent;
+  animation: hologlow 6s linear infinite;
+  text-shadow: 0 0 10px rgba(96,165,250,0.6),
+               0 0 20px rgba(168,85,247,0.5);
+}
+@keyframes hologlow {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+
+
+    nav{
+      display:flex;gap:20px;
+      transition:max-height .5s ease, opacity .5s ease;
+    }
+    
+nav a{
+  font-family: 'Orbitron', sans-serif;
+  font-weight:700;
+  text-transform:uppercase;
+  background:linear-gradient(90deg,#4ade80,#60a5fa,#22d3ee,#4ade80);
+  background-size:300% 300%;
+  -webkit-background-clip:text;
+  color:transparent;
+  animation:holo 6s infinite linear;
+  position:relative;
+  font-size:18px;
+}
+nav a::after{
+  content:'';
+  position:absolute;
+  bottom:-6px;left:0;
+  width:100%;height:3px;
+  background:linear-gradient(90deg,#4ade80,#60a5fa,#22d3ee);
+  transform:scaleX(0);
+  transition:transform .4s;
+  transform-origin:left;
+}
+
+    nav a:hover{color:#fff;transform:translateY(-3px);}
+    nav a:hover::after{transform:scaleX(1)}
+
+    .hero{
+height:100vh;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+text-align:center;
+gap:20px;
+padding:20px;
+position:relative;
+overflow:hidden;
+width:100vw; /* Teljes szélesség hero szakaszban */
+}
+
+
+#heroMatrix{
+position:absolute;
+top:0;
+left:0;
+width:100%;
+height:100%;
+z-index:0;
+opacity:0.2;
+}
+.hero h2 {
+  font-family: 'Raleway', sans-serif;
+  font-size: 54px;
+  font-weight: 800;
+  text-transform: capitalize; 
+  letter-spacing: 1px;
+  position: relative;
+  z-index: 1;
+
+  background: linear-gradient(90deg, var(--primary), var(--secondary));
+  -webkit-background-clip: text;
+  color: transparent;
+
+  
+  text-shadow: 
+    2px 2px 6px rgba(0,0,0,0.6),
+    0px 0px 10px rgba(74,222,128,0.5),
+    0px 0px 16px rgba(96,165,250,0.4);
+
+  animation: holoShift 6s linear infinite;
+}
+
+@keyframes holoShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+ .hero p {
+  font-family: 'Raleway', sans-serif;
+  font-size: 20px;
+  font-weight: 500;
+  max-width: 800px;
+  margin: 0 auto;
+  color: #f8fafc; 
+
+  
+  text-shadow: 
+    1px 1px 3px rgba(0,0,0,0.6),
+    0px 0px 6px rgba(255,255,255,0.7),
+    0px 0px 12px rgba(148,163,184,0.4); 
+
+  letter-spacing: 0.5px;
+  line-height: 1.6;
+
+  animation: fadeInUp 2s ease forwards;
+  position: relative;
+  z-index: 1;
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.contact-info{
+text-align:center;
+margin-top:30px;
+font-size:18px;
+}
+.contact-info p{
+margin:8px 0;
+color:#999;
+}
+.contact-info a{
+color:var(--secondary);
+text-decoration:none;
+font-weight:600;
+}
+.contact-info a:hover{
+text-decoration:underline;
+}
+
+    section{max-width:var(--max-w);margin:0 auto;padding:100px 20px;}
+    section h2{
+      font-size:32px;margin-bottom:10px;text-align:center;color:var(--primary);position:relative
+    }
+    section h2::after{
+      content:'';width:80px;height:4px;
+      background:linear-gradient(90deg,var(--primary),var(--secondary));
+      position:absolute;bottom:-10px;left:50%;transform:translateX(-50%);border-radius:2px
+    }
+
+    .timeline{display:flex;flex-direction:column;gap:20px}
+    .card{
+      background:rgba(255,255,255,0.05);border-radius:var(--radius);padding:20px;
+      box-shadow:0 8px 25px rgba(0,0,0,0.5);
+      transform:translateX(-50px);opacity:0;transition:all .8s ease
+    }
+    .card.in-view{transform:translateX(0);opacity:1}
+    .card strong{display:block;font-size:18px;margin-bottom:6px;color:#fff}
+    .card span{font-size:14px;color:var(--muted)}
+
+    .skills{
+      display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+      gap:20px;margin-top:30px
+    }
+    .skill{
+      background:rgba(255,255,255,0.05);padding:16px;border-radius:var(--radius);
+      box-shadow:0 4px 20px rgba(0,0,0,0.3);position:relative;overflow:hidden
+    }
+    .skill::before{
+      content:'';position:absolute;top:0;left:0;width:0;height:100%;
+      background:linear-gradient(90deg,var(--primary),var(--secondary));
+      opacity:0.15;transition:.6s
+    }
+    .skill:hover::before{width:100%}
+    .skill h3{margin-bottom:8px;font-size:18px;color:#fff}
+    .skill p{font-size:14px;color:var(--muted)}
+
+    footer{text-align:center;padding:40px 20px;color:var(--muted);font-size:14px}
+
+    @keyframes fadeIn{from{opacity:0;transform:translateY(-20px)}to{opacity:1;transform:translateY(0)}}
+    @keyframes slideUp{from{opacity:0;transform:translateY(40px)}to{opacity:1;transform:translateY(0)}}
+
+.hero-texts {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.hero-texts p {
+  font-size: 15px;
+  font-weight: 600;
+  opacity: 0;
+  transform: translateX(-100%);
+  animation: slideIn 1s forwards;
+}
+
+.hero-texts p:nth-child(1) { animation-delay: 0.3s; }
+.hero-texts p:nth-child(2) { animation-delay: 0.6s; }
+.hero-texts p:nth-child(3) { animation-delay: 0.9s; }
+.hero-texts p:nth-child(4) { animation-delay: 1.2s; }
+
+@keyframes slideIn {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+
+
+
+    
+    .hamburger{display:none;flex-direction:column;cursor:pointer;gap:5px;z-index:1100}
+    .hamburger div{width:25px;height:3px;background:#fff;border-radius:3px}
+    .hamburger.open div:nth-child(1){transform:rotate(45deg) translateY(8px)}
+    .hamburger.open div:nth-child(2){opacity:0}
+    .hamburger.open div:nth-child(3){transform:rotate(-45deg) translateY(-8px)}
+
+  @media(max-width:768px){
+  nav{
+    max-height:0;
+    opacity:0;
+    overflow:hidden;
+    flex-direction:column;
+    position:absolute;
+    top:100%;
+    right:0;
+    background:#1e293b;
+    padding:0 20px;
+    border-radius:0 0 12px 12px;
+    transition:max-height 0.4s ease, opacity 0.4s ease, padding 0.4s ease;
+  }
+  nav.open{
+    max-height:500px; 
+    opacity:1;
+    padding:20px;
+  }
+  .hamburger{display:flex}
+}
+
+
+
+    
+    .extra-section{text-align:center;margin-top:40px}
+    .extra-btn{
+      background:linear-gradient(90deg,var(--primary),var(--secondary));
+      border:none;padding:12px 24px;font-size:16px;font-weight:600;
+      border-radius:var(--radius);cursor:pointer;color:#0f111a;transition:.3s
+    }
+    .extra-btn:hover{opacity:.85}
+    .typewriter-card{
+      background:rgba(255,255,255,0.05);border-radius:var(--radius);
+      padding:20px;margin-top:20px;
+      box-shadow:0 8px 25px rgba(0,0,0,0.5);
+    }
+    .typewriter{
+      font-size:18px;white-space:pre-wrap;word-wrap:break-word;
+      display:block;border-right:3px solid var(--primary);animation:blink 0.8s infinite;
+      font-family:'Fira Code', monospace;text-align:left;color:#e2e8f0;
+      text-shadow:0 0 8px var(--primary), 0 0 16px var(--secondary);
+      line-height:1.6em;letter-spacing:1px;min-height:120px;
+    }
+    @keyframes blink{50%{border-color:transparent}}
+    
+    
+    .progress {
+  background: rgba(255,255,255,0.1);
+  border-radius: 10px;
+  overflow: hidden;
+  height: 10px;
+  margin-top: 6px;
+}
+.progress span {
+  display: block;
+  height: 100%;
+  background: linear-gradient(90deg,var(--primary),var(--secondary));
+  width: 70%; 
+}
+.dark-toggle {
+  margin-left: 20px;
+  background: none;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+  color: var(--primary);
+  transition: transform 0.3s ease;
+}
+.dark-toggle:hover { transform: rotate(20deg); }
+
+
+body.dark {
+  background: linear-gradient(135deg, #f1f5f9 0%, #e2e8f0 100%);
+  color: #0f111a;
+}
+
+body.dark header {
+  background: rgba(240, 245, 255, 0.9);
+}
+
+
+
+
+body.dark h3,
+body.dark .hero h2,
+body.dark .hero-texts p,
+
+
+body.dark .skills,
+body.dark .typewriter {
+  color: #0f111a !important;
+  text-shadow: none;
+}
+
+body.dark .hamburger div {
+  background:#000;
+}
+
+
+body.dark .skill,
+body.dark .card {
+  background: rgba(255,0,0,0.05);
+  color: #1e293b;
+}
+
+body.dark .card strong {
+  color: #000 !important; 
+}
+
+body.dark footer {
+  color: #1e293b;
+}
+
+
+.profile-pic {
+  margin-top: 20px;
+  position: relative;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  overflow: hidden;
+  box-shadow: 0 0 20px rgba(74, 222, 128, 0.8), 0 0 40px rgba(96, 165, 250, 0.6);
+  animation: glowPulse 3s infinite alternate;
+}
+.profile-pic img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+}
+@keyframes glowPulse {
+  from { box-shadow: 0 0 15px rgba(74, 222, 128, 0.6); }
+  to   { box-shadow: 0 0 35px rgba(96, 165, 250, 0.8); }
+}
+
+
+#galeria { padding:48px 20px; }
+#galeria h2 { margin-bottom:18px; }
+
+
+.sg-gallery { position:relative; max-width:1100px; margin:0 auto; display:flex; align-items:center; gap:12px; padding:18px; border-radius:18px; }
+.sg-viewport { overflow:hidden; width:100%; }
+.sg-track { display:flex; transition:transform .6s cubic-bezier(.22,.9,.28,1); align-items:center; will-change:transform; }
+
+
+.sg-slide {
+  flex:0 0 100%;
+  max-width:100%;
+  border-radius:14px;
+  object-fit:cover;
+  box-shadow: 0 12px 35px rgba(2,6,23,0.45);
+  transform-origin:center center;
+  transition:transform .45s ease, opacity .45s ease, filter .45s ease;
+  opacity:1;
+}
+
+
+.sg-nav {
+  background: linear-gradient(90deg, rgba(255,255,255,0.06), rgba(255,255,255,0.02));
+  border:1px solid rgba(255,255,255,0.06);
+  color:var(--text);
+  width:56px; height:56px; border-radius:999px;
+  display:flex; align-items:center; justify-content:center;
+  font-size:32px; cursor:pointer; z-index:30;
+  transition:transform .18s ease, background .18s;
+}
+.sg-nav:hover { transform:translateY(-4px); }
+body.dark .sg-nav { background: linear-gradient(90deg, rgba(0,0,0,0.06), rgba(0,0,0,0.02)); color: #fff; }
+
+
+@media (min-width: 992px) {
+  .sg-gallery { padding:28px 36px; }
+  .sg-slide { flex:0 0 60%; max-width:60%; margin:0 8px; }
+  
+  .sg-slide.prev, .sg-slide.next { flex:0 0 20%; max-width:20%; opacity:0.95; filter:brightness(.95) saturate(.95); transform:scale(.84); }
+  .sg-slide.inactive { opacity:0; transform:scale(.9) translateY(10px); filter:blur(2px) saturate(.6); pointer-events:none; }
+  .sg-viewport { width: calc(100% - 120px); } 
+}
+
+
+@media (min-width: 640px) and (max-width:991px) {
+  .sg-slide { flex:0 0 80%; max-width:80%; margin:0 8px; }
+  .sg-slide.prev, .sg-slide.next { flex:0 0 50%; max-width:50%; transform:scale(.9); opacity:.9; }
+}
+
+
+@media (max-width:639px) {
+  .sg-gallery { padding:14px; }
+  .sg-nav { width:44px; height:44px; font-size:24px; }
+  .sg-slide { flex:0 0 100%; max-width:100%; margin:0; border-radius:12px; }
+}
+
+
+.sg-thumbs { display:flex; gap:8px; justify-content:center; margin-top:14px; flex-wrap:wrap; }
+.sg-thumbs img { width:72px; height:48px; object-fit:cover; border-radius:8px; cursor:pointer; opacity:.85; border:2px solid transparent; transition:opacity .18s, transform .18s; }
+.sg-thumbs img:hover { transform:translateY(-4px); }
+.sg-thumbs img.active { opacity:1; border-color: rgba(255,255,255,0.12); }
+
+
+.sg-gallery:focus { outline: none; }
+
+  
+
+nav {
+  display:flex;
+  gap:30px;
+  align-items:center;
+}
+@media(max-width:768px){
+  nav{flex-direction:column;}
+}
+
+nav a{
+  font-family: 'Orbitron', sans-serif;
+  font-weight:700;
+  text-transform:uppercase;
+  background:linear-gradient(90deg,#4ade80,#60a5fa,#22d3ee,#4ade80);
+  background-size:300% 300%;
+  -webkit-background-clip:text;
+  color:transparent;
+  animation:holo 6s infinite linear;
+  position:relative;
+  font-size:18px;
+}
+nav a::after{
+  content:'';
+  position:absolute;
+  bottom:-6px;left:0;
+  width:100%;height:3px;
+  background:linear-gradient(90deg,#4ade80,#60a5fa,#22d3ee);
+  transform:scaleX(0);
+  transition:transform .4s;
+  transform-origin:left;
+}
+
+nav a:hover::after{transform:scaleX(1)}
+
+
+
+.swiper-slide img {
+  width:100%;
+  height:auto;
+  border-radius:20px;
+  box-shadow:0 8px 25px rgba(0,0,0,0.4);
+  object-fit:cover;
+  max-height:500px;
+}
+@media(max-width:768px){
+  .swiper-slide img {
+    max-height:280px;
+    border-radius:14px;
+  }
+}
+
+
+
+
+.digital-clock{
+  font-family:'Orbitron',sans-serif;
+  font-weight:800;
+  letter-spacing:2px;
+  font-size:15px;
+  padding:6px 12px;
+  border-radius:12px;
+  background:rgba(255,255,255,0.06);
+  box-shadow:0 4px 14px rgba(0,0,0,0.4);
+  text-shadow:0 0 8px var(--secondary);
+  border:1px solid rgba(255,255,255,0.08);
+  user-select:none;
+  min-width: 128px;
+  text-align:center;
+}
+header .digital-clock{margin-left:auto;margin-right:12px}
+body.dark .digital-clock{
+  background:rgba(0,0,0,0.06);
+  text-shadow:none;
+  border-color:rgba(0,0,0,0.08);
+}
+
+
+.end-wrap{
+  max-width:var(--max-w);
+  margin:0 auto;
+  padding:40px 20px 80px;
+  display:flex;
+  justify-content:center;
+}
+.end-btn{
+  background:linear-gradient(90deg,var(--secondary),var(--primary));
+  border:none;
+  padding:16px 26px;
+  font-size:18px;
+  font-weight:800;
+  border-radius:999px;
+  color:#0f111a;
+  cursor:pointer;
+  box-shadow:0 12px 30px rgba(2,6,23,0.4);
+  transition:transform .15s ease,opacity .2s ease;
+}
+.end-btn:hover{transform:translateY(-2px);opacity:.95}
+
+.modal-overlay{
+  position:fixed; inset:0;
+  background:rgba(0,0,0,0.65);
+  backdrop-filter:blur(3px);
+  display:none;
+  align-items:center;
+  justify-content:center;
+  z-index:2000;
+}
+.modal{
+  background:#0b1220;
+  color:#e2e8f0;
+  max-width:560px;
+  width:92%;
+  padding:28px;
+  border-radius:20px;
+  box-shadow:0 20px 60px rgba(0,0,0,0.6);
+  border:1px solid rgba(255,255,255,0.08);
+  text-align:center;
+}
+.modal h3{
+  font-family:'Orbitron',sans-serif;
+  font-size:24px;
+  margin-bottom:8px;
+  background:linear-gradient(90deg,var(--primary),var(--secondary));
+  -webkit-background-clip:text;
+  color:transparent;
+}
+.modal p{color:#cbd5e1;margin-bottom:16px}
+.modal .close-btn{
+  margin-top:8px;
+  background:transparent;
+  border:1px solid rgba(255,255,255,0.2);
+  color:#e2e8f0;
+  padding:10px 18px;
+  border-radius:999px;
+  cursor:pointer;
+}
+
+
+
+
+.modal-title {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 24px;
+  font-weight: 800;
+  margin-bottom: 12px;
+  
+  /* Hologramos lilás-kékes gradiens */
+  background: linear-gradient(
+    90deg,
+    #a855f7,  /* lila */
+    #60a5fa,  /* kék */
+    #ffffff,  /* fehér */
+    #ec4899,  /* rózsaszínes */
+    #a855f7   /* újra lila */
+  );
+  background-size: 300% 300%;
+  -webkit-background-clip: text;
+  color: transparent;
+  
+  /* Hologram fényhatás */
+  text-shadow: 
+    0 0 8px rgba(168,85,247,0.7),
+    0 0 16px rgba(96,165,250,0.6),
+    0 0 24px rgba(255,255,255,0.8);
+  
+  animation: holoGlow 6s linear infinite;
+}
+
+@keyframes holoGlow {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+</style>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+</head>
+<body>
+
+<header>
+  <h1>Szénaszki Gergő</h1>
+  <button id="darkToggle" class="dark-toggle">🌙</button>
+  <div class="digital-clock" id="digitalClock" aria-live="polite">--:--:--</div>
+ 
+  <div class="hamburger" id="hamburger"><div></div><div></div><div></div></div>
+  <nav id="menu">
+    <a href="#tapasztalat">Tapasztalat</a>
+    <a href="#tanulmanyok">Tanulmányok</a>
+    <a href="#keszsegek">Készségek</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <canvas id="heroMatrix"></canvas>
+  <h2>Szénászki Gergő önélétrajz</h2>
+ 
+    <!-- Profilkép -->
+  <div class="profile-pic">
+ <img src="https://graph.facebook.com/100026220015730/picture?type=large" alt="Profilkép">
+
+  </div>
+    <div class="hero-texts">
+    <p class="slide">Egyedi önéletrajz</p>
+    <p class="slide">Kreatív megoldások</p>
+    <p class="slide">Modern design</p>
+    <p class="slide">Professzionális bemutatkozás</p>
+  </div>
+</section>
+
+
+<!-- ===== Swiper Galéria ===== -->
+<section id="galeria">
+  <h2>Képgaléria</h2>
+  <div class="swiper mySwiper">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide"><img src="https://cdn.pixabay.com/photo/2016/03/27/18/54/technology-1283624_1280.jpg" alt="Kép 1"></div>
+      <div class="swiper-slide"><img src="https://cdn.pixabay.com/photo/2016/11/19/15/32/laptop-1839876_1280.jpg" alt="Kép 2"></div>
+      <div class="swiper-slide"><img src="https://cdn.pixabay.com/photo/2018/11/13/18/05/html-3813614_1280.jpg" alt="Kép 3"></div>
+      <div class="swiper-slide"><img src="https://cdn.pixabay.com/photo/2017/02/05/00/19/web-design-2038872_1280.jpg" alt="Kép 4"></div>
+    </div>
+    <!-- Navigáció -->
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-pagination"></div>
+  </div>
+</section>
+
+
+
+<section id="tapasztalat">
+  <h2>Tapasztalat</h2>
+  <div class="timeline">
+    <div class="card"><strong>Train Hungary Magánvasút Kft. — Személyi sofőr</strong><span>2021. december – 2025. július</span><p>Vezető személyszállítása, rugalmasság, pontosság és diszkréció.</p></div>
+    <div class="card"><strong>Körösmarket Kft. — Raktáros</strong><span>2014. augusztus – 2021. december</span><p>Komissiózás, leltározás, árukezelés és adminisztráció.</p></div>
+    <div class="card"><strong>Szarvasi Kontact Kft. — Ételkiszállító</strong><span>2012 – 2014. július</span><p>Ételkiszállítás, ügyfélszolgálat, útvonal-optimalizálás.</p></div>
+  </div>
+</section>
+
+<section id="tanulmanyok">
+  <h2>Tanulmányok</h2>
+  <div class="timeline">
+    <div class="card"><strong>Vajda Péter Gimnázium — Informatika szak</strong><span>2006 – 2010</span></div>
+    <div class="card"><strong>Vajda Péter Gimnázium — Hálózattelepítő és üzemeltető technikus</strong><span>2010 – 2012</span></div>
+  </div>
+
+  <div class="extra-section">
+    <button class="extra-btn" id="showText">Kattints ide!</button>
+    <div class="typewriter-card">
+      <div id="typewriter"></div>
+    </div>
+  </div>
+</section>
+
+<section id="keszsegek">
+  <h2>Készségek</h2>
+  <div class="skills">
+    <div class="skill"><h3>Angol nyelv</h3><p>Alapfok</p></div>
+    <div class="skill"><h3>B kategóriás jogosítvány</h3><p>Több éves vezetési tapasztalat</p></div>
+    <div class="skill"><h3>Számítástechnika</h3><p>Alapvető számítógépes és hálózati ismeretek</p></div>
+     <div class="skill"><h3>Web</h3><p>HTML CSS JS</p></div>
+    <div class="skill"><h3>Személyes erősségek</h3><p>Pontosság, megbízhatóság, szervezőkészség, csapatmunka</p></div>
+  </div>
+  
+</section>
+
+
+<div class="end-wrap">
+  <button id="endBtn" class="end-btn">Ha végignézted az oldalt, kattints ide</button>
+</div>
+
+<section id="elerhetoseg">
+<h2>Elérhetőség</h2>
+<div class="contact-info">
+<p>Email: <a href="mailto:kisszena92@gmail.com">kisszena92@gmail.com</a></p>
+<p>Telefon: <a href="tel:+36209530038">+36 20 953 0038</a></p>
+</div>
+</section>
+
+<footer>© 2025 Szénaszki Gergő — Modern animált önéletrajz weboldal</footer>
+
+<script>
+  // scroll animáció
+  const cards=document.querySelectorAll('.card');
+  const observer=new IntersectionObserver(entries=>{
+    entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in-view')}})
+  },{threshold:.2});
+  cards.forEach(c=>observer.observe(c));
+
+  // mobil menü
+  const hamburger=document.getElementById('hamburger');
+  const menu=document.getElementById('menu');
+  const links=menu.querySelectorAll('a');
+  let isOpen=false;
+
+  hamburger.addEventListener('click',()=>{
+    isOpen=!isOpen;
+    menu.classList.toggle('open');
+    hamburger.classList.toggle('open');
+    links.forEach((link,i)=>{
+      setTimeout(()=>{link.classList.toggle('show',isOpen)},i*100);
+    });
+  });
+
+// Menü bezárása funkció
+function closeMenu() {
+  menu.classList.remove("open");
+  hamburger.classList.remove("open");
+  links.forEach(link => link.classList.remove("show"));
+  isOpen = false;
+}
+
+// Linkre kattintás -> zárás
+links.forEach(link => {
+  link.addEventListener("click", closeMenu);
+});
+
+// Kívülre kattintás -> zárás
+document.addEventListener("click", (e) => {
+  if (isOpen && !menu.contains(e.target) && !hamburger.contains(e.target)) {
+    closeMenu();
+  }
+});
+
+
+  // typewriter
+  const btn=document.getElementById('showText');
+  const tw=document.getElementById('typewriter');
+  const text="3 éve foglalkozok html oldalak fejlesztésével.\nKezeltem WordPress oldalt is, de nincs nagy tapasztalatom benne!\nA frontend fejlesztés az erősségem, folyamatosan fejlesztem magam más területeken is! \nÖrülnék a lehetőségnek.";
+  btn.addEventListener('click',()=>{
+    tw.className="typewriter";tw.textContent="";
+    let i=0;const interval=setInterval(()=>{
+      tw.textContent=text.slice(0,i);i++;
+      if(i>text.length)clearInterval(interval);
+    },35);
+  });
+
+  // mátrix háttér
+  const heroCanvas=document.getElementById('heroMatrix');
+  const ctx=heroCanvas.getContext('2d');
+  function resize(){heroCanvas.width=window.innerWidth;heroCanvas.height=window.innerHeight;}
+  resize();
+  const letters="abcdefghijklmnopqrstuvwxyz0123456789";
+  const fontSize=16;let cols=Math.floor(heroCanvas.width/fontSize);let drops=Array(cols).fill(1);
+  function draw(){
+  // háttér áttetsző kitöltése
+  ctx.fillStyle = document.body.classList.contains("dark") 
+    ? "rgba(220,220,220,0.25)"   // világos háttér halvány fehér fátyol
+    : "rgba(15,17,26,0.2)";     // sötét háttér fekete fátyol
+  ctx.fillRect(0,0,heroCanvas.width,heroCanvas.height);
+
+  // betűk színe mód szerint
+  ctx.fillStyle = document.body.classList.contains("dark") 
+    ? "rgba(0,100,0,1.9)"    // ARANY szín világos módban
+    : "rgba(100,255,200,0.8)";  // zöld szín sötét módban
+  ctx.font = fontSize+"px monospace";
+
+  for(let i=0;i<drops.length;i++){
+    const text=letters.charAt(Math.floor(Math.random()*letters.length));
+    ctx.fillText(text,i*fontSize,drops[i]*fontSize);
+    if(drops[i]*fontSize>heroCanvas.height && Math.random()>0.975){
+      drops[i]=0;
+    }
+    drops[i]++;
+  }
+}
+
+  setInterval(draw,50);
+  window.addEventListener("resize",()=>{resize();cols=Math.floor(heroCanvas.width/fontSize);drops=Array(cols).fill(1);});
+  
+  // Dark mode toggle
+const toggleBtn = document.getElementById("darkToggle");
+toggleBtn.addEventListener("click", () => {
+  document.body.classList.toggle("dark");
+  toggleBtn.textContent = document.body.classList.contains("dark") ? "☀️" : "🌙";
+});
+
+(function(){
+  const gallery = document.querySelector('.sg-gallery');
+  if(!gallery) return;
+
+  const track = gallery.querySelector('.sg-track');
+  const slides = Array.from(gallery.querySelectorAll('.sg-slide'));
+  const prevBtn = gallery.querySelector('.sg-prev');
+  const nextBtn = gallery.querySelector('.sg-next');
+  const thumbsContainer = document.querySelector('.sg-thumbs');
+
+  // Lazy load
+  slides.forEach(img => {
+    const ds = img.getAttribute('data-src');
+    if(ds){ img.src = ds; img.removeAttribute('data-src'); }
+  });
+
+  // Thumbnail generálás
+  slides.forEach((s, i) => {
+    if(!thumbsContainer) return;
+    const t = document.createElement('img');
+    t.src = s.src;
+    t.alt = s.alt || `Thumb ${i+1}`;
+    t.dataset.index = i;
+    t.addEventListener('click', () => { goTo(i); });
+    thumbsContainer.appendChild(t);
+  });
+
+  let index = 0;
+  const total = slides.length;
+
+  function clamp(n){ return ((n % total) + total) % total; }
+
+  function updateClasses(){
+    slides.forEach((s, i) => {
+      s.classList.remove('prev','next','active','inactive');
+      if(i === index) s.classList.add('active');
+      else if(i === clamp(index - 1)) s.classList.add('prev');
+      else if(i === clamp(index + 1)) s.classList.add('next');
+      else s.classList.add('inactive');
+    });
+    // update thumbs
+    const thumbs = document.querySelectorAll('.sg-thumbs img');
+    thumbs.forEach(t => t.classList.toggle('active', Number(t.dataset.index) === index));
+  }
+
+  function goTo(i){
+    index = clamp(i);
+    updateClasses();
+    // itt fix szélesség alapú transzformáció → nem csúszik el
+    track.style.transform = `translateX(-${index * 100}%)`;
+  }
+
+  prevBtn.addEventListener('click', ()=> goTo(index-1));
+  nextBtn.addEventListener('click', ()=> goTo(index+1));
+
+  // Keyboard vezérlés
+  gallery.addEventListener('keydown', (e) => {
+    if(e.key === 'ArrowLeft') goTo(index-1);
+    if(e.key === 'ArrowRight') goTo(index+1);
+  });
+  gallery.tabIndex = 0;
+
+  // Swipe
+  let startX = 0, deltaX = 0, isTouch = false;
+  gallery.addEventListener('touchstart', e => { isTouch=true; startX = e.touches[0].clientX; }, {passive:true});
+  gallery.addEventListener('touchmove', e => { if(!isTouch) return; deltaX = e.touches[0].clientX - startX; }, {passive:true});
+  gallery.addEventListener('touchend', () => {
+    if(!isTouch) return;
+    if(Math.abs(deltaX) > 50){
+      if(deltaX > 0) goTo(index-1); else goTo(index+1);
+    }
+    deltaX = 0; isTouch = false;
+  });
+
+  // init
+  updateClasses();
+  goTo(0);
+})();
+
+
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script>
+var swiper = new Swiper(".mySwiper", {
+  spaceBetween: 30,
+  centeredSlides: true,
+  loop:true,
+  autoplay: {
+    delay: 4000,
+    disableOnInteraction: false,
+  },
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  },
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+});
+</script>
+
+<!-- Thank-you Modal -->
+<div class="modal-overlay" id="thankModal" role="dialog" aria-modal="true" aria-labelledby="thankTitle" aria-hidden="true">
+  <div class="modal" role="document">
+    <h4 class="modal-title" id="thankTitle">Köszönöm, hogy végignézted az oldalt!</h4>
+    <p>Remélem, megtetszett ez az egyedi HTML önéletrajz. ✨</p>
+    <button class="close-btn" id="closeThank">Bezárás</button>
+  </div>
+</div>
+
+
+<script>
+// === Real-time Digital Clock ===
+(function(){
+  const el = document.getElementById('digitalClock');
+  function pad(n){ return n.toString().padStart(2,'0'); }
+  function tick(){
+    const now = new Date();
+    // Local time display (browser locale). Force 24h for HU feel.
+    const hh = pad(now.getHours());
+    const mm = pad(now.getMinutes());
+    const ss = pad(now.getSeconds());
+    el.textContent = hh + ':' + mm + ':' + ss;
+  }
+  tick();
+  setInterval(tick, 1000);
+})();
+
+// === End button -> Thank-you modal ===
+(function(){
+  const btn = document.getElementById('endBtn');
+  const modal = document.getElementById('thankModal');
+  const closeBtn = document.getElementById('closeThank');
+
+  function openModal(){
+    modal.style.display = 'flex';
+    modal.setAttribute('aria-hidden','false');
+    // focus the close button for accessibility
+    closeBtn.focus();
+  }
+  function closeModal(){
+    modal.style.display = 'none';
+    modal.setAttribute('aria-hidden','true');
+    btn.focus();
+  }
+
+  btn.addEventListener('click', openModal);
+  closeBtn.addEventListener('click', closeModal);
+  modal.addEventListener('click', (e)=>{
+    if(e.target === modal) closeModal();
+  });
+  document.addEventListener('keydown', (e)=>{
+    if(e.key === 'Escape' && modal.style.display === 'flex') closeModal();
+  });
+})();
+</script>
+
+</body>
+</html>
